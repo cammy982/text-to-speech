@@ -40,30 +40,30 @@
     <h1 class="mdc-typography--display1">Hello, World!</h1>
     
     <input type="text" name="phrase" id="phrase">
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="special mdc-button mdc-button--raised">
       Say Phrase
     </button>
     
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="standard mdc-button mdc-button--raised">
       Hello!
     </button>
     <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Get to class!
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Oh Whale...
     </button> <br>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       I'm here for the tea
     </button>
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       Can I have more coffee?
     </button> 
-     <button type="button" class="mdc-button mdc-button--raised">
+     <button type="button" class="standard mdc-button mdc-button--raised">
       You're EXPOSED.
     </button>
-    <button type="button" class="mdc-button mdc-button--raised">
+    <button type="button" class="standard mdc-button mdc-button--raised">
       Country boy I love you
     </button>
     
@@ -108,10 +108,13 @@
             
         // hook up event handler on the buttons
         
-         $("button").on("click", function() {
+         $("button.standard").on("click", function() {
            sayIt($(this).text());
          });
         
+        $("button.special").on("click", function() {
+           sayIt($("#phrase").val());
+         });
 
 
 
